@@ -3,6 +3,7 @@ export default function Posts(){
     
     return(
         <div class="posts">
+            
             { posts.map( post => <Post imagem = {post.imagem} name = {post.name} conteudo = {post.conteudo}  curtidasImagem = {post.curtidasImagem} curtidasName = {post.curtidasName} curtidasQuantidade = {post.curtidasQuantidade}/> )}
   
         </div>
