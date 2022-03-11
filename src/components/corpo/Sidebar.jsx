@@ -1,4 +1,4 @@
-export default function Sidebar(){
+export default function Sidebar(props){
 
     const sugestoes = [{imagem:'assets/img/bad.vibes.memes.svg', nome:'bad.vibes.memes', razao: 'Segue você'},{imagem: 'assets/img/chibirdart.svg', nome:'chibirdart', razao: 'Segue você'},{imagem:'assets/img/razoesparaacreditar.svg', nome: 'razoesparaacreditar', razao: 'Novo no Instagram'},{imagem: 'assets/img/adorable_animals.svg', nome: 'adorable_animals', razao: 'Segue você'},{imagem: 'assets/img/smallcutecats.svg', nome: 'smallcutecats', razao: 'Segue você'}]
     
@@ -7,8 +7,8 @@ export default function Sidebar(){
             <div class="usuario">
                 <img src="assets/img/catanacomics.svg" />
                 <div class="texto">
-                    <strong>catanacomics</strong>
-                    Catana
+                    <strong>{props.userName}</strong>
+                    {props.name}
                 </div>
             </div>
 
