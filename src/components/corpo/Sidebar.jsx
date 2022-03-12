@@ -1,14 +1,14 @@
 export default function Sidebar(props){
 
     const sugestoes = [{imagem:'assets/img/bad.vibes.memes.svg', nome:'bad.vibes.memes', razao: 'Segue você'},{imagem: 'assets/img/chibirdart.svg', nome:'chibirdart', razao: 'Segue você'},{imagem:'assets/img/razoesparaacreditar.svg', nome: 'razoesparaacreditar', razao: 'Novo no Instagram'},{imagem: 'assets/img/adorable_animals.svg', nome: 'adorable_animals', razao: 'Segue você'},{imagem: 'assets/img/smallcutecats.svg', nome: 'smallcutecats', razao: 'Segue você'}]
-    
+    const {userName, name} = props
     return(
         <div class="sidebar">
             <div class="usuario">
                 <img src="assets/img/catanacomics.svg" />
                 <div class="texto">
-                    <strong>{props.userName}</strong>
-                    {props.name}
+                    <strong>{userName}</strong>
+                    {name}
                 </div>
             </div>
 
@@ -35,17 +35,18 @@ export default function Sidebar(props){
 
 
 function Sugestao(props){
+    const {imagem, name, razao} = props
     return(
         <div class="sugestao">
             <div class="usuario">
-                <img src={props.imagem} />
+                <img src={imagem} />
                 <div class="texto">
-                    <div class="nome">{props.name}</div>
+                    <div class="nome">{name}</div>
                     <div class="razao">Segue você</div>
                 </div>
             </div>
 
-            <div class="seguir">{props.razao}</div>
+            <div class="seguir">{razao}</div>
         </div>
     )
 }
